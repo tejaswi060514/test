@@ -3,144 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elegant Landing Page</title>
+  <title>Modern Landing Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --primary-bg: #0f1724;
-      --primary-accent: #8b5cf6;
-      --secondary-accent: #06b6d4;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(255,255,255,0.06);
-      --glass-light: rgba(255,255,255,0.04);
-      --glass-lighter: rgba(255,255,255,0.02);
-      --border-radius: 16px;
+    :root {
+      --primary-bg: #101827;
+      --accent-primary: #ff6bcb; /* changed purple to pinkish */
+      --accent-secondary: #00d4d4; /* teal stays */
+      --muted-text: #a0aec0;
+      --card-bg: rgba(255,255,255,0.07);
+      --glass-light: rgba(255,255,255,0.05);
+      --glass-lighter: rgba(255,255,255,0.03);
+      --radius: 14px;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: radial-gradient(1200px 600px at 10% 20%, rgba(139,92,246,0.12), transparent),
-                  radial-gradient(900px 400px at 85% 80%, rgba(6,182,212,0.08), transparent),
-                  linear-gradient(180deg,var(--primary-bg), #071028 100%);
-      color:#e6eef8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:40px 24px;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+      background: radial-gradient(1200px 600px at 10% 20%, rgba(255,107,203,0.12), transparent),
+                  radial-gradient(900px 400px at 85% 80%, rgba(0,212,212,0.08), transparent),
+                  linear-gradient(180deg, var(--primary-bg), #08101f);
+      color: #e0e7ff;
+      line-height: 1.5;
+      padding: 36px 20px;
     }
 
-    .wrapper{max-width:1200px;margin:0 auto}
+    .wrapper { max-width: 1150px; margin: 0 auto; }
 
-    /* Header */
-    header{
-      display:flex;
-      gap:24px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:48px;
-    }
-    .brand-link{
-      display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit
-    }
-    .brand-logo{
-      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--primary-accent),var(--secondary-accent));
-      display:grid;place-items:center;font-weight:800;font-family:'Playfair Display',serif;color:white;box-shadow:0 6px 24px rgba(11,12,20,0.6);
-    }
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--text-muted);text-decoration:none;font-weight:600}
-    .button-cta{background:linear-gradient(90deg,var(--primary-accent),var(--secondary-accent));padding:10px 16px;border-radius:12px;color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(99,102,241,0.18)}
-
-    /* Hero */
-    .hero-section{
-      display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;margin-bottom:48px;
-    }
-    .tagline{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--primary-accent);letter-spacing:0.6px}
-    h1{font-family:'Playfair Display',serif;font-size:44px;margin:12px 0;}
-    h1 span{background:linear-gradient(90deg,var(--primary-accent),var(--secondary-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-    p.description{color:var(--text-muted);font-size:16px;max-width:58ch}
-
-    .hero-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:20px;padding:20px;backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,0.03);
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+    header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;
     }
 
-    .stats{display:flex;gap:12px;margin-top:18px}
-    .stat-item{background:var(--glass-light);padding:10px 12px;border-radius:12px;font-weight:700;color:white}
+    .logo-block { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .logo-circle { width: 50px; height: 50px; border-radius: 12px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); display:grid; place-items:center; font-family:'Playfair Display', serif; font-weight:800; color:white; box-shadow:0 5px 20px rgba(0,0,0,0.5); }
+    nav { display:flex; gap:14px; align-items:center; flex-wrap: wrap; }
+    nav a { color: var(--muted-text); font-weight: 600; text-decoration: none; }
+    .btn-main { background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); padding: 10px 16px; border-radius: 12px; font-weight:700; color:white; text-decoration:none; box-shadow:0 5px 15px rgba(255,107,203,0.3); }
+
+    /* Hero Section */
+    .hero { display: grid; grid-template-columns: 1fr 380px; gap: 28px; align-items:center; margin-bottom: 40px; }
+    .tagline { display: inline-block; background: var(--glass-light); padding: 5px 10px; border-radius: 999px; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 40px; margin: 10px 0; }
+    h1 span { background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    p.description { color: var(--muted-text); font-size: 15px; max-width: 56ch; }
+
+    .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius: 18px; padding: 18px; backdrop-filter: blur(5px); border:1px solid rgba(255,255,255,0.03); box-shadow:0 8px 25px rgba(0,0,0,0.5); }
+
+    .stats { display: flex; gap:10px; margin-top:16px; flex-wrap: wrap; }
+    .stat { background: var(--glass-light); padding:8px 10px; border-radius:12px; font-weight:700; color:white; font-size:13px; }
 
     /* Features */
-    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .feature-item{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.02);min-height:110px}
-    .feature-item h3{margin:8px 0 6px 0}
-    .feature-item p{margin:0;color:var(--text-muted);font-size:14px}
+    .features-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:24px; }
+    .feature-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); min-height:100px; }
+    .feature-card h3 { margin:6px 0 4px 0; }
+    .feature-card p { margin:0; color: var(--muted-text); font-size:13px; }
 
     /* Gallery */
-    .gallery-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .gallery-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:14px;padding:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(2,6,23,0.5);}
-    .gallery-card img{width:100%;border-radius:10px;margin-bottom:12px}
+    .gallery-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-top:28px; }
+    .gallery-card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)); border-radius:12px; padding:12px; border:1px solid rgba(255,255,255,0.03); box-shadow:0 5px 15px rgba(0,0,0,0.4); }
+    .gallery-card img { width:100%; border-radius:8px; margin-bottom:10px; }
 
-    /* Contact */
-    .contact-section{margin-top:36px;display:flex;gap:18px;align-items:flex-start}
-    .form-container{flex:1;background:var(--card-bg);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .form-container label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
-    .form-container input,.form-container textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;font-size:14px}
-    .form-container button{margin-top:10px;padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--primary-accent),var(--secondary-accent));font-weight:700;cursor:pointer}
+    /* Contact Form */
+    .contact-section { margin-top:32px; display:flex; gap:16px; align-items:flex-start; flex-wrap: wrap; }
+    .form-box { flex:1; background: var(--card-bg); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); }
+    .form-box label { display:block; font-weight:700; font-size:13px; margin-bottom:5px; }
+    .form-box input, .form-box textarea { width:100%; padding:9px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit; font-size:14px; }
+    .form-box button { margin-top:8px; padding:9px 12px; border-radius:10px; border:0; background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); font-weight:700; cursor:pointer; }
 
-    /* Footer */
-    footer{margin-top:56px;color:var(--text-muted);display:flex;justify-content:space-between;align-items:center}
+    footer { margin-top:48px; color:var(--muted-text); display:flex; justify-content:space-between; flex-wrap: wrap; gap:12px; }
 
-    /* Responsive */
-    @media (max-width:980px){
-      .hero-section{grid-template-columns:1fr;}
-      .features-grid{grid-template-columns:repeat(2,1fr)}
-      .gallery-cards{grid-template-columns:repeat(2,1fr)}
-      header{flex-direction:column;gap:14px;align-items:flex-start}
-    }
-    @media (max-width:600px){
-      .features-grid{grid-template-columns:1fr}
-      .gallery-cards{grid-template-columns:1fr}
-      p.description{font-size:15px}
-      h1{font-size:32px}
-    }
+    /* Responsive tweaks */
+    @media(max-width:900px) { .hero { grid-template-columns:1fr; } .features-grid { grid-template-columns:repeat(2,1fr); } .gallery-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:600px) { .features-grid, .gallery-grid { grid-template-columns:1fr; } p.description { font-size:14px; } h1 { font-size:28px; } }
 
-    /* small animations */
-    .animate-fade{opacity:0;transform:translateY(8px);animation:fadeInUp .7s ease forwards}
-    .delay-1{animation-delay:0.12s}
-    .delay-2{animation-delay:0.24s}
-    .delay-3{animation-delay:0.36s}
-    @keyframes fadeInUp{to{opacity:1;transform:none}}
+    /* Animations */
+    .fadeup { opacity:0; transform: translateY(10px); animation: fadeUp 0.7s ease forwards; }
+    .fade-delay-1 { animation-delay:0.1s; }
+    .fade-delay-2 { animation-delay:0.25s; }
+    .fade-delay-3 { animation-delay:0.4s; }
+    @keyframes fadeUp { to { opacity:1; transform:none; } }
+
   </style>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <a class="brand-link" href="#">
-        <div class="brand-logo">ED</div>
+      <a class="logo-block" href="#">
+        <div class="logo-circle">ML</div>
         <div>
-          <div style="font-weight:800;font-family:'Playfair Display',serif">Elegant Design</div>
-          <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Modern UI Templates</div>
+          <div style="font-weight:800;font-family:'Playfair Display',serif">Modern Labs</div>
+          <div style="font-size:12px;color:var(--muted-text);margin-top:3px">UI & Web Templates</div>
         </div>
       </a>
-
       <nav>
         <a href="#features">Features</a>
         <a href="#works">Gallery</a>
         <a href="#contact">Contact</a>
-        <a class="button-cta" href="#">Get Started</a>
+        <a class="btn-main" href="#">Get Started</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero-section">
+      <section class="hero">
         <div>
-          <span class="tagline animate-fade delay-1">New • 2025 Collection</span>
-          <h1 class="animate-fade delay-2">A sleek <span>landing page</span> for your ideas.</h1>
-          <p class="description animate-fade delay-3">Modern, responsive starter template. Glassmorphic cards, readable fonts, and subtle motion create a friendly experience. Customize colors, fonts, and images easily.</p>
+          <span class="tagline fadeup fade-delay-1">New • 2025 Release</span>
+          <h1 class="fadeup fade-delay-2">Create a stylish <span>website</span> quickly.</h1>
+          <p class="description fadeup fade-delay-3">Sleek starter template with glassmorphism, readable typography, and subtle motion. Fully customizable colors, fonts, and images for fast development.</p>
 
-          <div class="stats animate-fade" style="margin-top:20px">
-            <div class="
+          <div class="stats fadeup" style="margin-top:18px">
+            <div class="stat">⚡ Fast: Optimized CSS</div>
+            <div class="stat">🎨 Stylish: Gradient & Glass</div>
+            <div class="stat">🔐 Safe: Semantic HTML</div>
+          </div>
+
+          <div class="features-grid" id="features">
+            <div class="feature-card fadeup fade-delay-1">
+              <strong>Reusable</strong>
+              <h3>Component-based</h3>
+              <p>Cards, hero sections, and forms designed for reuse across pages.</p>
+            </div>
+            <div class="feature-card fadeup fade-delay-2">
+              <strong>Lightweight</strong>
+              <h3>Fast & Accessible</h3>
+              <p>Minimal CSS ensures low load time and high accessibility.</p>
+            </div>
+            <div class="feature-card fadeup fade-delay-3">
+              <strong>Flexible</strong>
+              <h3>Easy Customization</h3>
+              <p>Change colors, fonts, or images without using frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
